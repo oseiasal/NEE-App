@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+    <TextView
+    	android:id="@+id/tituloTela"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentLeft="true"
+    	android:layout_alignParentTop="true"
+    	android:layout_margin="10dp"
+    	android:text="Detalhes da vaga"
+    	android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+    	android:id="@+id/descriDaVaga"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentLeft="true"
+    	android:layout_below="@+id/tituloTela"
+    	android:layout_margin="10dp"
+    	android:text="Operador de Kart"
+    	android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TextView
+    	android:id="@+id/detalhesDaVaga"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentLeft="true"
+    	android:layout_below="@+id/descriDaVaga"
+    	android:layout_marginLeft="10dp"
+    	android:singleLine="false"
+    	android:text="Procuramos alguém responsável e competente para atuar em um autódromo em Interlagos."
+    	android:textAppearance="?android:attr/textAppearanceSmall" />
+    <TextView
+    	android:id="@+id/localDaVaga"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentLeft="true"
+    	android:layout_below="@+id/detalhesDaVaga"
+    	android:layout_marginBottom="5dp"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginTop="5dp"
+    	android:text="Interlagos - SP"
+    	android:textAppearance="?android:attr/textAppearanceSmall" />
+        <TextView
+    	android:id="@+id/bolsaDaVaga"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentLeft="true"
+    	android:layout_below="@+id/localDaVaga"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginRight="5dp"
+    	android:text="R$4.500,00"
+    	android:textAppearance="?android:attr/textAppearanceSmall" />
+    <LinearLayout
+    	android:id="@+id/campoBotoes"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_below="@+id/bolsaDaVaga"
+    	android:layout_centerHorizontal="true"
+    	android:layout_marginTop="25dp"
+    	 >
+    	<Button
+    		android:id="@+id/button1"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_below="@+id/bolsaDaVaga"
+    		android:background="#1144ff"
+    		android:text="Aceitar" />
+    	<Button
+    		android:id="@+id/button2"
+    		
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+
+    		android:text="Sair" />
+    </LinearLayout>
+</RelativeLayout>

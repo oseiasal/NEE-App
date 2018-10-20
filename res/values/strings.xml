@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Tela de Login  -->
+    <string name="app_name">NEE</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="txtLogin">ID</string>
+    <string name="txtPassword">Senha</string>
+    
+    <string name="txtBtnLogin">Entrar</string>
+    <string name="txtBtnCadastrar">Cadastrar</string>
+    
+    <!-- Tela de vagas -->
+    <string name="txtPerfil">Perfil do Candidato</string>
+    <string name="txtMensagem">Selecione a vaga para mais detalhes.</string>
+    <string name="txtSair">Sair</string>
+    <string name="logo">Logo</string>
+    
+   
+
+</resources>
+

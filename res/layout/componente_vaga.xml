@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+	<TextView
+		android:id="@+id/titulo_vaga"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="5dp"
+		android:layout_marginBottom="5dp"
+		android:layout_marginTop="5dp"
+		android:text="Estágio química"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:textSize="30sp" />
+	<TextView
+		android:id="@+id/descricao_vaga"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="5dp"
+		android:singleLine="false"
+		android:text="Procuramos por pessoas que queiram trabalhar conosco."
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:textSize="20sp" />
+	<TextView
+		android:id="@+id/salario_vaga"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="5dp"
+		android:text="Bolsa: R$300,00"
+		android:textSize="20sp" />
+</LinearLayout>
