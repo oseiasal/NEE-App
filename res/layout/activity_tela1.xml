@@ -4,7 +4,7 @@
 	android:layout_height="match_parent" >
 	<RelativeLayout
 		android:layout_width="match_parent"
-		android:layout_height="match_parent" >
+		android:layout_height="wrap_content" >
 		<ImageView
 			android:id="@+id/logo"
 			android:layout_width="150dp"
@@ -48,5 +48,16 @@
 			android:layout_below="@+id/btnLogar"
 			android:layout_centerHorizontal="true"
 			android:text="@string/txtBtnCadastrar" />
+		
+		<TextView
+			android:id="@+id/loginStatus"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignTop="@+id/login"
+			android:layout_centerHorizontal="true"
+			android:layout_marginBottom="10dp"
+			android:layout_marginTop="10dp"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textColor="#FF2222" />
 	</RelativeLayout>
 </ScrollView>

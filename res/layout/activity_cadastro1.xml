@@ -11,10 +11,11 @@
 			android:id="@+id/titleCadastro"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_centerHorizontal="true"
 			android:layout_marginBottom="10dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="10dp"
 			android:text="Cadastro"
-			android:textAppearance="?android:attr/textAppearanceLarge" />
+			android:textSize="25sp" />
 		<TextView
 			android:id="@+id/subtitleCadastro"
 			android:layout_width="wrap_content"
@@ -22,9 +23,8 @@
 			android:layout_alignParentLeft="true"
 			android:layout_below="@+id/titleCadastro"
 			android:layout_marginLeft="10dp"
-			android:text="Informações Pessoais"
-			android:textAppearance="?android:attr/textAppearanceMedium"
-			android:textSize="25sp" />
+			android:text="1. Informações Pessoais"
+			android:textSize="20sp" />
 		<EditText
 			android:id="@+id/nomeCadastro"
 			android:layout_width="fill_parent"
@@ -63,7 +63,7 @@
 			android:layout_marginTop="5dp"
 			android:hint="Cidade" />
 		<EditText
-			android:id="@+id/telefoneCadastro"
+			android:id="@+id/estadoCadastro"
 			android:layout_width="200dp"
 			android:layout_height="wrap_content"
 			android:layout_below="@+id/cidadeCadastro"
@@ -75,27 +75,17 @@
 			android:id="@+id/cpfCadastro"
 			android:layout_width="200dp"
 			android:layout_height="wrap_content"
-			android:layout_below="@+id/telefoneCadastro"
+			android:layout_below="@+id/estadoCadastro"
 			android:layout_marginLeft="10dp"
 			android:layout_marginRight="10dp"
 			android:layout_marginTop="5dp"
 			android:hint="CPF" />
 		<Button
-			android:id="@+id/button1"
+			android:id="@+id/ProximaTela"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_below="@+id/cpfCadastro"
-			android:layout_marginTop="18dp"
-			android:layout_toLeftOf="@+id/button2"
-			android:text="Salvar" />
-		<Button
-			android:id="@+id/button2"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_alignBaseline="@+id/button1"
-			android:layout_alignBottom="@+id/button1"
-			android:layout_alignLeft="@+id/titleCadastro"
-			android:layout_marginLeft="34dp"
+			android:layout_centerHorizontal="true"
 			android:text="Próximo" />
 	</RelativeLayout>
 </ScrollView>

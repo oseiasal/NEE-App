@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
@@ -10,8 +11,7 @@
 		android:layout_marginRight="10dp"
 		android:layout_marginTop="5dp"
 		android:text="Cadastro"
-		android:textAppearance="?android:attr/textAppearanceLarge" />
-	
+		android:textSize="25sp" />
 	<ScrollView
 		android:layout_width="match_parent"
 		android:layout_height="match_parent" >
@@ -24,13 +24,14 @@
 			<TextView
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_gravity="left"
 				android:layout_marginLeft="10dp"
 				android:layout_marginRight="10dp"
 				android:layout_marginTop="10dp"
-				android:text="Informações do Curso"
-				android:textAppearance="?android:attr/textAppearanceMedium" 
-				android:layout_gravity="left"/>
+				android:text="2. Informações do Curso"
+				android:textSize="20sp" />
 			<EditText
+				android:id="@+id/instituicao"
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:layout_marginLeft="10dp"
@@ -38,6 +39,7 @@
 				android:layout_marginTop="5dp"
 				android:hint="Nome da instituição" />
 			<EditText
+				android:id="@+id/curso"
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:layout_marginLeft="10dp"
@@ -45,6 +47,7 @@
 				android:layout_marginTop="5dp"
 				android:hint="Curso" />
 			<EditText
+				android:id="@+id/semestre"
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:layout_marginLeft="10dp"
@@ -52,6 +55,7 @@
 				android:layout_marginTop="5dp"
 				android:hint="Semestre" />
 			<EditText
+				android:id="@+id/dataConclui"
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:layout_marginLeft="10dp"
@@ -61,13 +65,15 @@
 			<TextView
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_gravity="left"
 				android:layout_marginLeft="10dp"
 				android:layout_marginRight="10dp"
 				android:layout_marginTop="10dp"
-				android:text="Acesso"
+				android:text="3. Acesso"
 				android:textAppearance="?android:attr/textAppearanceMedium"
-				android:layout_gravity="left" />
+				android:textSize="20sp" />
 			<EditText
+				android:id="@+id/loginNovo"
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:layout_marginLeft="10dp"
@@ -75,17 +81,25 @@
 				android:layout_marginTop="5dp"
 				android:hint="Login" />
 			<EditText
+				android:id="@+id/senhaNova"
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:layout_marginLeft="10dp"
 				android:layout_marginRight="10dp"
 				android:layout_marginTop="5dp"
 				android:hint="Senha" />
+			
 			<Button
-				android:id="@+id/button1"
+				android:id="@+id/btnSalvarBd"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="Salvar" />
+				android:text="Enviar" />
+			
+			<Button
+				android:id="@+id/btnClose"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Fechar" />
 		</LinearLayout>
 	</ScrollView>
 </LinearLayout>
