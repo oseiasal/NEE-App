@@ -45,6 +45,8 @@ public class Tela1 extends Activity implements OnClickListener {
 		// 2º pegar o conteudo e pesquisar no banco de dados
 		// 3º se a senha o usuario e a senha estiverem no sistema, então abrir tela de
 		// vaga
+		
+		// 4: enviar esse usuario e senha pra outra tela pra manter o login;
 		TextView login = (TextView) findViewById(R.id.login);
 		TextView passwd = (TextView) findViewById(R.id.password);
 
