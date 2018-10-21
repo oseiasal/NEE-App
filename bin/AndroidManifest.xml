@@ -27,6 +27,7 @@
         <activity android:name="com.projeto.nee.TelaVaga"></activity>
         <activity android:name="com.projeto.nee.DetalhesVaga"></activity>
         <activity android:name="com.projeto.nee.TelaCadastro"></activity>
+        <activity android:name="com.projeto.nee.TelaCadastro2"></activity>
         
        
         
