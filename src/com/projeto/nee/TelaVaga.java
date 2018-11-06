@@ -1,65 +1,86 @@
 package com.projeto.nee;
 
+import java.sql.*;
 import java.util.ArrayList;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
+import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ListAdapter;
+import conexao.sql.Conector;
 import android.widget.ListView;
 
-/**
- *  Esta Classe é responsável pela tela de vagas.
- *  
- */
-
 public class TelaVaga extends Activity implements OnItemClickListener {
+	//
 
-	//Intent inter = new Intent();
-	ArrayList<Vaga> listaDeVagas = new ArrayList<Vaga>();
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		//setContentView(R.layout.activity_tela1);
 		setContentView(R.layout.activity_tela_de_vagas);
-		
-		// Criar um ArrayList para as vagas e depois adicionar as vagas nesse array
-		
-		
-		listaDeVagas.add(new Vaga("Pedreiro", "Venha trabalhar no PAC do governo Dilma", "R$1205,00"));
-		listaDeVagas.add(new Vaga("Eletricista", "Precisamos de eletricistas", "R$1500,00"));
-		listaDeVagas.add(new Vaga("Engenheiro", "Venha trabalhar no PAC do governo Dilma", "R$30000,00"));
-		listaDeVagas.add(new Vaga("Auxiliar de Reprodução", "Precisamos de você para reproduzir discos", "R$2500,00"));
-		
-		//Criar um adapter
-		VagaAdapter adapter = new VagaAdapter(this, listaDeVagas);
-		
-		
-		//Criar o componente list view e associá-lo			
+
+		// Criar um adapter
+		VagaAdapter adapter = new VagaAdapter(this, mode());
+
+		// Criar o componente list view e associá-lo
 		ListView listaVaga = new ListView(this);
 		listaVaga = (ListView) findViewById(R.id.listViewVagas);
-		
 		listaVaga.setOnItemClickListener(this);
-		
 		listaVaga.setAdapter(adapter);
-		
+
 	}
-	
+
+	public ArrayList<Vaga> mode() {
+
+		ArrayList<Vaga> listaDeVagas = new ArrayList<Vaga>();
+
+		Connection conectar = Conector.getConnection();
+		ResultSet rs = null;
+
+		try {
+
+			Statement stm = conectar.createStatement();
+			rs = stm.executeQuery("select * from vagas");
+
+			while (rs.next()) {
+
+				Vaga item = new Vaga();
+
+				item.setTitulo(rs.getString("titulo"));
+				item.setDescricao(rs.getString("descricao"));
+				item.setSalario(rs.getString("salario"));
+
+				listaDeVagas.add(item);
+			}
+
+		} catch (Exception e) {
+
+			Vaga item = new Vaga();
+			item.setTitulo("Falhou");
+			item.setDescricao("Erro desconhecido");
+			listaDeVagas.add(item);
+
+			Log.e("BANCO", "Listar:" + e.getMessage());
+
+		}
+
+		return listaDeVagas;
+	}
 
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-		// Cria uma nova intenção de abrir a tela 
-		
-				//listaDeVagas.get(position);
-				Intent novaTela = new Intent(this, DetalhesVaga.class);	
-				novaTela.putExtra("TITULO", listaDeVagas.get(position).titulo);
-				novaTela.putExtra("DESCRICAO", listaDeVagas.get(position).descricao);
-				novaTela.putExtra("SALARIO", listaDeVagas.get(position).salario);
-				
-				startActivity(novaTela);
-		
+		// Cria uma nova intenção de abrir a tela
+
+		// listaDeVagas.get(position);
+		Intent novaTela = new Intent(this, DetalhesVaga.class);
+		novaTela.putExtra("TITULO", mode().get(position).titulo);
+		novaTela.putExtra("DESCRICAO", mode().get(position).descricao);
+		novaTela.putExtra("SALARIO", mode().get(position).salario);
+
+		startActivity(novaTela);
+
 	}
 }

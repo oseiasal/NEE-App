@@ -13,11 +13,15 @@ public class Vaga implements OnClickListener, Serializable {
 	public String descricao;
 	public String salario;
 
-	public Vaga(String vaga, String descric, String valor) {
+	public Vaga() {
 
-		titulo = vaga;
-		descricao = descric;
-		salario = valor;
+	}
+
+	public Vaga(String vaga, String descric, String valor) {
+		super();
+		this.titulo = vaga;
+		this.descricao = descric;
+		this.salario = valor;
 	}
 
 	public String getTitulo() {
@@ -30,6 +34,18 @@ public class Vaga implements OnClickListener, Serializable {
 
 	public String getSalario() {
 		return salario;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public void setSalario(String salario) {
+		this.salario = salario;
 	}
 
 	@Override
